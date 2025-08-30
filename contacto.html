@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Vientos del Sur Inmobiliaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-inter">
+
+    <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
+    <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center">
+        <div class="mt-4 sm:mt-0 flex flex-wrap justify-center sm:justify-center space-x-4">
+            <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Inicio</a>
+            <a href="acerca-de.html" class="text-white hover:text-blue-200 transition duration-300">Sobre Nosotros</a>
+            <a href="estrategias.html" class="text-white hover:text-blue-200 transition duration-300">Estrategias y Crecimiento</a>
+            <a href="contacto.html" class="text-white hover:text-blue-200 transition duration-300">Contacto</a>
+        </div>
+    </nav>
+</header>
+    <section class="max-w-70vw mx-auto relative flex items-center justify-center text-white text-3xl font-bold text-center p-4">
+    <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-full object-cover">
+</section>
+    <main class="container mx-auto px-4 py-12">
+    
+
+        <section class="bg-white p-8 rounded-xl shadow-lg mb-8">
+           
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800"><i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>Dirección</h3>
+                    <p class="text-gray-600">Av. Principal 1234, Montevideo, Uruguay</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800"><i class="fas fa-phone-alt mr-2 text-blue-600"></i>Teléfono</h3>
+                    <p class="text-gray-600">098 803 248</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800"><i class="fas fa-envelope mr-2 text-blue-600"></i>Correo</h3>
+                    <p class="text-gray-600">info@vientosdelsur.com.uy</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800"><i class="fas fa-clock mr-2 text-blue-600"></i>Horario</h3>
+                    <p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
+                    <p class="text-gray-600">Sábados: 10:00 - 14:00</p>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 text-center">Envíanos un mensaje</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </form>
+        </section>
+        </main>
+    
+    <a href="https://wa.me/098803248" target="_blank" class="whatsapp-button bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+    <footer class="bg-blue-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <img src="LogoVientosdelsur.png" alt="Logo Vientos del Sur" class="h-10 mx-auto mb-4">
+            <p class="text-sm">&copy; 2025 Vientos del Sur -Agentes Inmobiliarios. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>

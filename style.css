@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Estilos principales para la tipografía y el body */
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilos para el botón de WhatsApp flotante */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+/* Estilos para el efecto de sombra en el texto del banner */
+.text-shadow-md {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Nuevo estilo para el ancho máximo del 70% */
+.max-w-70vw {
+    max-width: 70vw;
+}
+
+/* Este estilo crea un contenedor que mantiene una relación de aspecto 16:9 */
+.aspect-ratio-16-9 {
+    position: relative;
+    width: 100%;
+    /* Utiliza 'aspect-ratio' si tu navegador lo soporta (es lo mejor) */
+    aspect-ratio: 16 / 9;
+    /* Si no lo soporta, usa el truco de 'padding-top' como alternativa */
+    padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+}
+
+/* Estilos para el carrusel de imágenes */
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+/* Estilo que asegura que las imágenes mantengan su proporción dentro del carrusel */
+#carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo que asegura que la imagen principal mantenga su proporción */
+.aspect-ratio-16-9 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media queries para mejorar la responsividad en móviles */
+@media (max-width: 768px) {
+    .max-w-70vw {
+        max-width: 95vw;
+    }
+    
+    header nav {
+        padding: 0.5rem;
+    }
+    
+    header nav a {
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Asegurar que el menú desplegable en móviles tenga el ancho correcto */
+@media (max-width: 768px) {
+    #menu-items {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Ajustar el logo en móviles */
+    header nav img {
+        height: 2rem;
+    }
+}
