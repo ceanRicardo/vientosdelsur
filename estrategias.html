@@ -18,95 +18,139 @@
             right: 20px;
             z-index: 100;
         }
+        /* Estilos para menú móvil */
+        #menu-toggle {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            #menu-toggle {
+                display: block;
+            }
+            #menu-items {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #1e40af;
+                padding: 1rem 0;
+                z-index: 50;
+            }
+            #menu-items.active {
+                display: flex;
+                flex-direction: column;
+            }
+            .max-w-70vw {
+                max-width: 95vw !important;
+            }
+            header, section {
+                max-width: 95vw !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-inter">
 
-    <header class="max-w-[70vw] mx-auto bg-blue-800 shadow-md">
-        <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center">
-            <div class="mt-4 sm:mt-0 flex flex-wrap justify-center sm:justify-center space-x-4">
-                <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Inicio</a>
-                <a href="acerca-de.html" class="text-white hover:text-blue-200 transition duration-300">Sobre Nosotros</a>
-                <a href="estrategias.html" class="text-white hover:text-blue-200 transition duration-300">Servicios</a>
-                <a href="contacto.html" class="text-white hover:text-blue-200 transition duration-300">Contacto</a>
+    <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
+        <nav class="px-4 py-3 flex justify-between items-center">
+            <!-- Logo a la izquierda -->
+            <div class="flex items-center">
+                <img src="LogoVientosdelsur.png" alt="Vientos del Sur" class="h-8 md:h-10">
+            </div>
+            
+            <!-- Botón de menú hamburguesa para móviles -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- Menú de navegación -->
+            <div id="menu-items" class="md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-blue-800 md:bg-transparent py-4 md:py-0 z-50">
+                <div class="flex flex-col md:flex-row md:space-x-4 text-center">
+                    <a href="index.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Inicio</a>
+                    <a href="acerca-de.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Sobre Nosotros</a>
+                    <a href="estrategias.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Servicios</a>
+                    <a href="contacto.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Contacto</a>
+                </div>
             </div>
         </nav>
     </header>
-    <section class="max-w-[70vw] mx-auto relative flex items-center justify-center text-white text-3xl font-bold text-center p-4">
-        <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-full object-cover">
+
+    <section class="max-w-70vw mx-auto relative flex items-center justify-center text-white text-3xl font-bold text-center p-4">
+        <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-auto md:h-full object-cover">
     </section>
 
-    <main class="container mx-auto px-4 py-12">
-        <div class="max-w-[70vw] mx-auto">
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <div class="max-w-70vw mx-auto">
 
-          <section class="bg-white p-8 rounded-xl shadow-lg mb-8">
-              <h1 class="text-2xl font-bold text-sky-500 mb-4 text-center">Nuestros Servicios</h1>
-              <p class="text-gray-600 leading-relaxed text-lg ">
+          <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-6 md:mb-8">
+              <h1 class="text-xl md:text-2xl font-bold text-sky-500 mb-4 text-center">Nuestros Servicios</h1>
+              <p class="text-gray-600 leading-relaxed text-base md:text-lg">
                   En <strong>Vientos del Sur</strong>, nos dedicamos a ofrecer un servicio inmobiliario integral y personalizado, diseñado para acompañarlo en cada una de las etapas del proceso de la operación que necesite realizar.
               </p>
           </section>
 
-            <section class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <h2 class="text-2xl font-bold text-sky-500 mb-4">Ventas</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">
+            <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-6 md:mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-sky-500 mb-4">Ventas</h2>
+                <p class="text-gray-600 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
                     Nos encargamos de todo el proceso de venta de su propiedad, desde la tasación inicial hasta el cierre de la operación. Nuestro objetivo es asegurar que obtenga el mejor precio de mercado y que la operación se realice en el menor tiempo posible.
                 </p>
-                <div class="space-y-4">
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Valoración Profesional:</strong> Realizamos un análisis comparativo de mercado para determinar el precio más competitivo y adecuado para su inmueble.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Marketing Inmobiliario:</strong> Desarrollamos un plan de marketing a medida, utilizando fotografía profesional, tours virtuales y una fuerte presencia en los principales portales inmobiliarios y redes sociales.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Gestión de Visitas:</strong> Coordinamos y gestionamos las visitas de potenciales compradores, destacando las mejores características de su propiedad.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Negociación y Cierre:</strong> Lo representamos en el proceso de negociación, buscando siempre las condiciones más favorables para usted y brindando asesoramiento legal y notarial hasta la firma final.</p>
+                <div class="space-y-3 md:space-y-4">
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Valoración Profesional:</strong> Realizamos un análisis comparativo de mercado para determinar el precio más competitivo y adecuado para su inmueble.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Marketing Inmobiliario:</strong> Desarrollamos un plan de marketing a medida, utilizando fotografía profesional, tours virtuales y una fuerte presencia en los principales portales inmobiliarios y redes sociales.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Gestión de Visitas:</strong> Coordinamos y gestionamos las visitas de potenciales compradores, destacando las mejores características de su propiedad.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Negociación y Cierre:</strong> Lo representamos en el proceso de negociación, buscando siempre las condiciones más favorables para usted y brindando asesoramiento legal y notarial hasta la firma final.</p>
                 </div>
             </section>
 
-            <section class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <h2 class="text-2xl font-bold text-sky-500 mb-4">Alquileres</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">
+            <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-6 md:mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-sky-500 mb-4">Alquileres</h2>
+                <p class="text-gray-600 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
                     Si busca alquilar una propiedad para encontrar el lugar ideal para vivir, nuestro equipo le ofrece una gestión de alquileres segura y eficiente, protegiendo los intereses de ambas partes.
                 </p>
-                <div class="space-y-4">
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Búsqueda y Selección de Inquilinos:</strong> Realizamos un riguroso proceso de selección de arrendatarios, incluyendo análisis de solvencia y referencias, para garantizar la tranquilidad del propietario.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Contratos de Arrendamiento:</strong> Redactamos contratos de alquiler claros y completos, conformes a la legislación vigente, para ofrecer seguridad jurídica a propietarios e inquilinos.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Gestión Integral:</strong> Ofrecemos la administración completa de su alquiler, incluyendo el cobro de la renta, seguimiento de pagos y la gestión de posibles incidencias.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Garantías y Seguros:</strong> Lo asesoramos sobre las distintas opciones de garantías de alquiler para asegurar el cumplimiento del contrato.</p>
+                <div class="space-y-3 md:space-y-4">
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Búsqueda y Selección de Inquilinos:</strong> Realizamos un riguroso proceso de selección de arrendatarios, incluyendo análisis de solvencia y referencias, para garantizar la tranquilidad del propietario.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Contratos de Arrendamiento:</strong> Redactamos contratos de alquiler claros y completos, conformes a la legislación vigente, para ofrecer seguridad jurídica a propietarios e inquilinos.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Gestión Integral:</strong> Ofrecemos la administración completa de su alquiler, incluyendo el cobro de la renta, seguimiento de pagos y la gestión de posibles incidencias.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Garantías y Seguros:</strong> Lo asesoramos sobre las distintas opciones de garantías de alquiler para asegurar el cumplimiento del contrato.</p>
                 </div>
             </section>
 
-            <section class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <h2 class="text-2xl font-bold text-sky-500 mb-4">Administración de Gastos Comunes</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">
+            <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-6 md:mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-sky-500 mb-4">Administración de Gastos Comunes</h2>
+                <p class="text-gray-600 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
                     Brindamos un servicio de administración de gastos comunes transparente, eficiente y profesional para edificios y copropiedades, asegurando el correcto mantenimiento y la convivencia armónica.
                 </p>
-                <div class="space-y-4">
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Liquidación Detallada:</strong> Realizamos liquidaciones de gastos comunes claras y precisas, con un detalle exhaustivo de todos los ingresos y egresos.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Gestión de Proveedores:</strong> Nos encargamos de la contratación y supervisión de los servicios necesarios para el mantenimiento del edificio (limpieza, seguridad, ascensores, etc.).</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Cobranza y Control de Morosidad:</strong> Gestionamos eficazmente el cobro de los gastos comunes y llevamos a cabo un seguimiento proactivo de la morosidad.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Asambleas y Comunicación:</strong> Coordinamos la celebración de asambleas de copropietarios y mantenemos una comunicación fluida y constante con todos los residentes.</p>
+                <div class="space-y-3 md:space-y-4">
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Liquidación Detallada:</strong> Realizamos liquidaciones de gastos comunes claras y precisas, con un detalle exhaustivo de todos los ingresos y egresos.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Gestión de Proveedores:</strong> Nos encargamos de la contratación y supervisión de los servicios necesarios para el mantenimiento del edificio (limpieza, seguridad, ascensores, etc.).</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Cobranza y Control de Morosidad:</strong> Gestionamos eficazmente el cobro de los gastos comunes y llevamos a cabo un seguimiento proactivo de la morosidad.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Asambleas y Comunicación:</strong> Coordinamos la celebración de asambleas de copropietarios y mantenemos una comunicación fluida y constante con todos los residentes.</p>
                 </div>
             </section>
             
-            <section class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <h2 class="text-2xl font-bold text-sky-500 mb-4">Desarrollos Inmobiliarios</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">
+            <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-6 md:mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-sky-500 mb-4">Desarrollos Inmobiliarios</h2>
+                <p class="text-gray-600 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
                     Asesoramos y acompañamos a inversores y desarrolladores en todas las fases de sus proyectos inmobiliarios, desde la concepción de la idea hasta su comercialización final.
                 </p>
-                <div class="space-y-4">
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Estudios de Viabilidad:</strong> Realizamos análisis de mercado y estudios de factibilidad para identificar las oportunidades de inversión más rentables.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Gestión de Proyectos:</strong> Colaboramos en la coordinación de las distintas etapas del desarrollo, desde la adquisición del terreno hasta la planificación y ejecución de la obra.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Estrategia Comercial:</strong> Diseñamos y ejecutamos estrategias de marketing y comercialización a medida para asegurar el éxito en la venta o alquiler de las unidades del proyecto.</p>
-                    <p class="text-gray-700"><strong class="font-semibold text-sky-500">Asesoramiento Integral:</strong> Ofrecemos un asesoramiento completo en aspectos legales, financieros y comerciales para optimizar la rentabilidad de su inversión.</p>
+                <div class="space-y-3 md:space-y-4">
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Estudios de Viabilidad:</strong> Realizamos análisis de mercado y estudios de factibilidad para identificar las oportunidades de inversión más rentables.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Gestión de Proyectos:</strong> Colaboramos en la coordinación de las distintas etapas del desarrollo, desde la adquisición del terreno hasta la planificación y ejecución de la obra.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Estrategia Comercial:</strong> Diseñamos y ejecutamos estrategias de marketing y comercialización a medida para asegurar el éxito en la venta o alquiler de las unidades del proyecto.</p>
+                    <p class="text-gray-700 text-sm md:text-base"><strong class="font-semibold text-sky-500">Asesoramiento Integral:</strong> Ofrecemos un asesoramiento completo en aspectos legales, financieros y comerciales para optimizar la rentabilidad de su inversión.</p>
                 </div>
             </section>
         </div>
     </main>
 
-    <a href="https://wa.me/098803248" target="_blank" class="whatsapp-button bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
-        <i class="fab fa-whatsapp text-4xl"></i>
+    <a href="https://wa.me/098803248" target="_blank" class="whatsapp-button bg-green-500 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+        <i class="fab fa-whatsapp text-2xl md:text-4xl"></i>
     </a>
-    <footer class="bg-blue-800 text-white py-8">
+    
+    <footer class="bg-blue-800 text-white py-6 md:py-8">
         <div class="container mx-auto px-4 text-center">
-            <img src="LogoVientosdelsur.png" alt="Logo Vientos del Sur" class="h-10 mx-auto mb-4">
-            <p class="text-sm">&copy; 2025 Vientos del Sur - Negocios Inmobiliarios. Todos los derechos reservados.</p>
+            <img src="LogoVientosdelsur.png" alt="Logo Vientos del Sur" class="h-8 md:h-10 mx-auto mb-4">
+            <p class="text-xs md:text-sm">&copy; 2025 Vientos del Sur - Negocios Inmobiliarios. Todos los derechos reservados.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
@@ -114,5 +158,34 @@
             </div>
         </div>
     </footer>
-    </body>
+
+    <script>
+        // Script para el menú móvil
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuItems = document.getElementById('menu-items');
+            
+            if (menuToggle && menuItems) {
+                menuToggle.addEventListener('click', function() {
+                    menuItems.classList.toggle('active');
+                });
+                
+                // Cerrar menú al hacer clic en un enlace
+                const menuLinks = menuItems.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        menuItems.classList.remove('active');
+                    });
+                });
+                
+                // Cerrar menú al hacer clic fuera de él
+                document.addEventListener('click', function(event) {
+                    if (!menuToggle.contains(event.target) && !menuItems.contains(event.target)) {
+                        menuItems.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
 </html>
