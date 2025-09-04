@@ -78,7 +78,7 @@
 </head>
 <body class="bg-gray-100 font-inter">
 
-   <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
+     <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
     <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center">
         <div class="mt-4 sm:mt-0 flex flex-wrap justify-center sm:justify-center space-x-4">
             <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Inicio</a>
@@ -94,56 +94,103 @@
         <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-auto md:h-full object-cover">
     </section>
 
-        <section class="px-4 text-center py-16">
-             <h2 class="text-xl md:text-2xl font-bold text-blue-600 mt-2 mb-8">Estudio del Mercado inmobiliario de Montevideo</h2>
-            <div class="inline-block mx-auto" style="max-width: 80%;">
-                <iframe class="w-full rounded-lg shadow-lg" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/8cJep-_xJeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </section>
 
-    <a href="https://wa.me/098803248" target="_blank" class="whatsapp-button bg-green-500 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
-        <i class="fab fa-whatsapp text-2xl md:text-4xl"></i>
-    </a>
-    
-    <footer class="bg-blue-800 text-white py-6 md:py-8">
-        <div class="max-w-70vw mx-auto px-4 text-center container-custom">
-            <img src="LogoVientosdelsur.png" alt="Logo Vientos del Sur" class="h-8 md:h-10 mx-auto mb-4">
-            <p class="text-xs md:text-sm">&copy; 2025 Vientos del Sur - Agentes inmobiliarios. Todos los derechos reservados.</p>
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+<main class="container mx-auto px-4 py-8 md:py-12">
+    <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">Análisis del Mercado Inmobiliario en Montevideo</h1>
+        <p class="text-gray-600 mb-10 text-center max-w-3xl mx-auto">
+            Comprender las tendencias del mercado es clave para tomar decisiones informadas, ya sea que estés buscando comprar, vender o invertir. Aquí te ofrecemos una visión general de los precios, alquileres y rentabilidad en los barrios más importantes de Montevideo.
+        </p>
+
+        <div class="space-y-8">
+            
+            <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                <div class="w-full md:w-1/2 flex flex-col">
+                    <div class="flex-grow rounded-lg overflow-hidden shadow-lg">
+                         <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica1.png')">
+                    <img src="grafica1.png" alt="Precio de Venta por Metro Cuadrado en Montevideo" class="w-full h-auto object-cover flex-grow">
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-semibold text-center text-gray-700">Gráfica 1: Precio de Venta por m²</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica2.png')">
+                    <img src="grafica2.png" alt="Comparativa de Precio en Barrios Clave" class="w-full h-auto object-cover flex-grow">
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-semibold text-center text-gray-700">Gráfica 2: Comparativa de Precio en Barrios Clave</h3>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica3.png')">
+                    <img src="grafica3.png" alt="Costos Promedio de Alquiler Mensual" class="w-full h-auto object-cover flex-grow">
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-semibold text-center text-gray-700">Gráfica 3: Costos Promedio de Alquiler</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica4.png')">
+                    <img src="grafica4.png" alt="Rentabilidad Bruta Anual por Barrio" class="w-full h-auto object-cover flex-grow">
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-semibold text-center text-gray-700">Gráfica 4: Rentabilidad Bruta Anual</h3>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica5.png')">
+                    <img src="grafica5.png" alt="Comparativa de Alquileres en Barrios Clave" class="w-full h-auto object-cover flex-grow">
+                    <div class="p-4 bg-gray-50">
+                        <h3 class="font-semibold text-center text-gray-700">Gráfica 5: Comparativa de Alquileres Mensuales</h3>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <script>
-        // Script para el menú móvil
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menu-toggle');
-            const menuItems = document.getElementById('menu-items');
-            
-            if (menuToggle && menuItems) {
-                menuToggle.addEventListener('click', function() {
-                    menuItems.classList.toggle('active');
-                });
-                
-                // Cerrar menú al hacer clic en un enlace
-                const menuLinks = menuItems.querySelectorAll('a');
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        menuItems.classList.remove('active');
-                    });
-                });
-                
-                // Cerrar menú al hacer clic fuera de él
-                document.addEventListener('click', function(event) {
-                    if (!menuToggle.contains(event.target) && !menuItems.contains(event.target)) {
-                        menuItems.classList.remove('active');
-                    }
-                });
-            }
-        });
-    </script>
+<div id="imageModal" class="modal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<a href="https://wa.me/098803248" target="_blank" class="whatsapp-button bg-green-500 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+    <i class="fab fa-whatsapp text-2xl md:text-4xl"></i>
+</a>
+
+<footer class="bg-blue-800 text-white py-6 md:py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+        <p class="text-xs md:text-sm">&copy; 2025 Vientos del Sur - Negocios Inmobiliarios. Todos los derechos reservados.</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    function openModal(imageSrc) {
+        modal.style.display = "flex";
+        modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    // Cierra el modal si el usuario hace clic fuera de la imagen
+    modal.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    });
+</script>
+
 </body>
 </html>

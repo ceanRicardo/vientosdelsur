@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Vientos del Sur Inmobiliaria</title>
+    <title>Contacto - Vientos del Sur Inmobiliaria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -18,68 +18,24 @@
             right: 20px;
             z-index: 100;
         }
-        /* Estilos para menú móvil */
-        #menu-toggle {
-            display: none;
-        }
-        @media (max-width: 768px) {
-            #menu-toggle {
-                display: block;
-            }
-            #menu-items {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #1e40af;
-                padding: 1rem 0;
-                z-index: 50;
-            }
-            #menu-items.active {
-                display: flex;
-                flex-direction: column;
-            }
-            .max-w-70vw {
-                max-width: 95vw !important;
-            }
-            header, section {
-                max-width: 95vw !important;
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-100 font-inter">
 
     <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
-        <nav class="px-4 py-3 flex justify-between items-center">
-            <!-- Logo a la izquierda -->
-           
-            
-            <!-- Botón de menú hamburguesa para móviles -->
-            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-            
-            <!-- Menú de navegación -->
-                <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center"></nav>
-                <div class="flex flex-col md:flex-row md:space-x-4 text-center">
-                    <a href="index.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Inicio</a>
-                    <a href="acerca-de.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Sobre Nosotros</a>
-                    <a href="estrategias.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Servicios</a>
-                    <a href="mercado.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Mercado inmobiliario</a>
-                    <a href="contacto.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Contacto</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+    <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center">
+        <div class="mt-4 sm:mt-0 flex flex-wrap justify-center sm:justify-center space-x-4">
+            <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Inicio</a>
+            <a href="acerca-de.html" class="text-white hover:text-blue-200 transition duration-300">Sobre Nosotros</a>
+            <a href="estrategias.html" class="text-white hover:text-blue-200 transition duration-300">Servicios</a>
+            <a href="mercado.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Mercado inmobiliario</a>
+            <a href="contacto.html" class="text-white hover:text-blue-200 transition duration-300">Contacto</a>
+        </div>
+    </nav>
+</header>
     <section class="max-w-70vw mx-auto relative flex items-center justify-center text-white text-3xl font-bold text-center p-4">
-        <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-auto md:h-full object-cover">
-    </section>
-
-    <main class="container mx-auto px-4 py-8 md:py-12">
-        <div class="max-w-70vw mx-auto">
+    <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-full object-cover">
+</section>
 
           <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-6 md:mb-8">
               <h1 class="text-xl md:text-2xl font-bold text-sky-500 mb-4 text-center">Nuestros Servicios</h1>
