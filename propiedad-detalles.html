@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vientos del Sur Inmobiliaria</title>
+    <title>Detalles de Propiedad - Vientos del Sur Inmobiliaria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -22,74 +22,163 @@
 </head>
 <body class="bg-gray-100 font-inter">
 
- <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
-    <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center">
-        <div class="mt-4 sm:mt-0 flex flex-wrap justify-center sm:justify-center space-x-4">
-            <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Inicio</a>
-            <a href="acerca-de.html" class="text-white hover:text-blue-200 transition duration-300">Sobre Nosotros</a>
-            <a href="estrategias.html" class="text-white hover:text-blue-200 transition duration-300">Servicios</a>
-            <a href="mercado.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Mercado inmobiliario</a>
-            <a href="contacto.html" class="text-white hover:text-blue-200 transition duration-300">Contacto</a>
-        </div>
-    </nav>
-</header>
-<section class="max-w-70vw mx-auto relative flex items-center justify-center text-white text-3xl font-bold text-center p-4">
-    <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-full object-cover">
-</section>
-    
-    <main class="max-w-70vw mx-auto px-4 py-12">
-        
-        <section class="bg-white p-8 rounded-xl shadow-lg mb-8">
-            <h2 class="text-2xl font-bold text-blue-600 mb-4">Hermosa casa a 100 mts de la playa</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="imagen3.jpg" alt="frente" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
-                <img src="imagen4.jpg" alt="costado" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
-                <img src="imagen5.jpg" alt="jardin" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
-                <img src="imagen6.jpg" alt="dormitorio" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
-                <img src="imagen7.png" alt="living" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
-                <img src="imagen8.jpg" alt="dormitorio infantil" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
-                <img src="imagen17.jpg" alt="baño" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
-                <img src="imagen18.jpg" alt="cocina" class="w-full h-48 object-cover rounded-md shadow-sm cursor-pointer" onclick="showImage(this)">
+    <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
+        <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center">
+            <div class="mt-4 sm:mt-0 flex flex-wrap justify-center sm:justify-center space-x-4">
+                <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Inicio</a>
+                <a href="acerca-de.html" class="text-white hover:text-blue-200 transition duration-300">Sobre Nosotros</a>
+                <a href="estrategias.html" class="text-white hover:text-blue-200 transition duration-300">Servicios</a>
+                <a href="mercado.html" class="text-white hover:text-blue-200 transition duration-300 py-2 md:py-0">Mercado inmobiliario</a>
+                <a href="contacto.html" class="text-white hover:text-blue-200 transition duration-300">Contacto</a>
             </div>
-        </section>
-        <section class="bg-white p-8 rounded-xl shadow-lg">
-          
-            <div class="space-y-4">
-                <div>
-                    <p class="text-gray-600 leading-relaxed">
-                     Amplia casa ubicada en una zona residencial tranquila. Cuenta con un gran jardín, un garaje para dos vehículos y un área de parrilla perfecta para reuniones al aire libre. La propiedad está en excelente estado de conservación y lista para ser habitada.
-                     Todos los impuestos están al día.Toda la documentación está en regla.
-                    </p>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="max-w-70vw mx-auto bg-white p-6 rounded-lg shadow-lg mb-8">
+                   <div class="relative w-full h-96 overflow-hidden rounded-lg mb-8">
+                   <div id="property-carousel" class="flex transition-transform duration-500 ease-in-out h-full">
+                    <div class="carousel-item min-w-full h-full flex items-center justify-center">
+                        <img src="imagen3.jpg" alt="Frente casa" class="object-cover w-full h-full">
+                    </div>
+                    <div class="carousel-item min-w-full h-full flex items-center justify-center">
+                        <img src="imagen4.jpg" alt="Frente casa" class="object-cover w-full h-full">
+                    </div>
+                    <div class="carousel-item min-w-full h-full flex items-center justify-center">
+                        <img src="imagen5.jpg" alt="jardín" class="object-cover w-full h-full">
+                    </div>
+                    <div class="carousel-item min-w-full h-full flex items-center justify-center">
+                        <img src="imagen6.jpg" alt="Dormitorio matrimonial" class="object-cover w-full h-full">
+                    </div>
+                    <div class="carousel-item min-w-full h-full flex items-center justify-center">
+                        <img src="imagen7.png" alt="Living" class="object-cover w-full h-full">
+                    </div>
+                    <div class="carousel-item min-w-full h-full flex items-center justify-center">
+                        <img src="imagen8.jpg" alt="Dormitorio infantil" class="object-cover w-full h-full">
+                    </div>
                 </div>
+                <button id="prev-property" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-property" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Memoria descriptiva</h3>
-                    <ul class="list-disc list-inside text-gray-600">
-                        <li>3 Dormitorios</li>
-                        <li>2 Baños</li>
-                        <li>Cocina equipada</li>
-                        <li>Amplio living-comedor</li>
-                        <li>Jardín, fondo con parrillero</li>
-                        <li>Garaje para 2 autos</li>
-                        <li>Amplio depósito</li>
-                        <li>Estufa a leña</li>
-                        <li>Aire acondicionado (2)</li>
+                   
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><i class="fas fa-bed text-blue-600 mr-2"></i>3 Dormitorios (1 en suite)</li>
+                        <li><i class="fas fa-bath text-blue-600 mr-2"></i>2 Baños completos</li>
+                        <li><i class="fas fa-ruler-combined text-blue-600 mr-2"></i>180 m² Construidos</li>
+                        <li><i class="fas fa-expand-alt text-blue-600 mr-2"></i>1242 m² Terreno</li>
+                        <li><i class="fas fa-car text-blue-600 mr-2"></i>Garaje para 2 vehículos</li>
+                        <li><i class="fas fa-swimming-pool text-blue-600 mr-2"></i>2 Aires Acondicionados</li>
+                        <li><i class="fas fa-calendar-alt text-blue-600 mr-2"></i>Antigüedad: 50 años</li>
+                        <li><i class="fas fa-fire-alt text-blue-600 mr-2"></i>Estufa a leña</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Precio:</h3>
-                    <p class="text-gray-600 leading-relaxed font-bold text-blue-600 text-xl">USD 250.000 </p>
+                   
+                    <p class="text-gray-700 leading-relaxed">
+                        Amplia casa a pocos metros de la playa.
+                        Cuenta con un gran living comedor.
+                        Dormitorios de dimensiones generosas.
+                        Cocina totalmente equipada.
+                        Excelente iluminación natural.
+                        Sistema de seguridad con cámaras y alarma.
+                        Próxima a colegios y a mts. de la Av. principal.
+                        ¡Una oportunidad única para vivir con confort y estilo!
+                    </p>
                 </div>
             </div>
+
+            <div class="bg-blue-50 p-6 rounded-lg flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <p class="text-xl text-gray-700">Precio:</p>
+                    <p class="text-4xl font-bold text-blue-800">USD 250.000</p>
+                </div>
+                
+            </div>
         </section>
-        </main>
+
+        <section class="max-w-70vw mx-auto py-12">
+           
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                <div class="relative group cursor-pointer" onclick="openModal('imagen3.jpg')">
+                    <img src="imagen3.jpg" alt="Frente casa" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen4.jpg')">
+                    <img src="imagen4.jpg" alt="Vista aérea" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen5.jpg')">
+                    <img src="imagen5.jpg" alt="jardín" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen6.jpg')">
+                    <img src="imagen6.jpg" alt="Dormitorio matrimonial" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen7.png')">
+                    <img src="imagen7.png" alt="Living" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen8.jpg')">
+                    <img src="imagen8.jpg" alt="Dormitorio infantil" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen17.jpg')">
+                    <img src="imagen17.jpg" alt="Cocina" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen18.jpg')">
+                    <img src="imagen18.jpg" alt="Baño" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer" onclick="openModal('imagen30.png')">
+                    <img src="imagen30.png" alt="frente" class="w-full h-56 object-cover rounded-lg shadow-md transition-transform transform group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                
+              
+               
+            </div>
+        </section>
+    </main>
+
+    <div id="image-modal" class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center p-4 z-50 hidden">
+        <div class="relative bg-white p-2 rounded-lg max-w-6xl max-h-full overflow-y-auto">
+            <button id="close-modal" class="absolute top-2 right-2 text-gray-800 hover:text-gray-600 text-3xl font-bold">&times;</button>
+            <img id="modal-image" src="" alt="Imagen ampliada" class="max-w-full max-h-[90vh]">
+        </div>
+    </div>
     
     <a href="https://wa.me/098803248" target="_blank" class="whatsapp-button bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
         <i class="fab fa-whatsapp text-4xl"></i>
     </a>
+
     <footer class="bg-blue-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <img src="LogoVientosdelsur.png" alt="Logo Vientos del Sur" class="h-10 mx-auto mb-4">
-            <p class="text-sm">&copy; 2025 Vientos del Sur - Inmobiliaria Todos los derechos reservados.</p>
+            <p class="text-sm">&copy; 2025 Vientos del Sur - Agentes Inmobiliarios. Todos los derechos reservados.</p>
             <div class="flex justify-center space-x-6 mt-4">
                 <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
@@ -97,29 +186,74 @@
             </div>
         </div>
     </footer>
-    <div id="image-modal" class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center p-4 z-50 hidden">
-        <div class="relative bg-white p-2 rounded-lg max-w-4xl max-h-full overflow-y-auto">
-            <button class="absolute top-2 right-2 text-gray-800 hover:text-gray-600 text-3xl font-bold" onclick="hideImage()">
-                &times;
-            </button>
-            <img id="modal-image" src="" alt="Imagen ampliada" class="max-w-full max-h-[80vh]">
-        </div>
-    </div>
+
     <script>
-        function showImage(element) {
-            const modal = document.getElementById('image-modal');
-            const modalImage = document.getElementById('modal-image');
-            modalImage.src = element.src;
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+        // Lógica del carrusel principal
+        let currentPropertyIndex = 0;
+        const propertyCarousel = document.getElementById('property-carousel');
+        const propertyItems = document.querySelectorAll('#property-carousel .carousel-item');
+        const totalPropertyItems = propertyItems.length;
+
+        function updatePropertyCarousel() {
+            if (propertyCarousel) {
+                propertyCarousel.style.transform = `translateX(-${currentPropertyIndex * 100}%)`;
+            }
         }
 
-        function hideImage() {
-            const modal = document.getElementById('image-modal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Habilita el scroll del fondo
+        document.getElementById('prev-property').addEventListener('click', () => {
+            currentPropertyIndex = (currentPropertyIndex - 1 + totalPropertyItems) % totalPropertyItems;
+            updatePropertyCarousel();
+        });
+
+        document.getElementById('next-property').addEventListener('click', () => {
+            currentPropertyIndex = (currentPropertyIndex + 1) % totalPropertyItems;
+            updatePropertyCarousel();
+        });
+
+        // Inicializar carrusel
+        if (propertyCarousel) {
+            updatePropertyCarousel();
+            // Opcional: auto-play para el carrusel de detalles de propiedad
+            // setInterval(() => {
+            //     currentPropertyIndex = (currentPropertyIndex + 1) % totalPropertyItems;
+            //     updatePropertyCarousel();
+            // }, 5000);
+        }
+
+        // Lógica para la ventana modal (Galería de Fotos)
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        function openModal(imageSrc) {
+            if (modal && modalImage) {
+                modalImage.src = imageSrc;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+            }
+        }
+
+        function closeModal() {
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                modalImage.src = '';
+                document.body.style.overflow = 'auto'; // Habilita el scroll del fondo
+            }
+        }
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target.id === 'image-modal') {
+                    closeModal();
+                }
+            });
         }
     </script>
-
 </body>
 </html>
