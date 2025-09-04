@@ -36,7 +36,23 @@
             margin-left: auto;
             margin-right: auto;
             object-fit: cover;
-            border: 4px solid #3b82f6; /* Tailwind's blue-500 */
+            border: 4px solid #3b82f6;
+        }
+        /* Clase para mantener 16:9 */
+        .ratio-16-9 {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .ratio-16-9 iframe,
+        .ratio-16-9 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         /* Estilos para menú móvil */
         #menu-toggle {
@@ -74,11 +90,57 @@
                 padding: 1rem;
             }
         }
+        /* --- Modal --- */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.6); 
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.flex {
+            display: flex;
+        }
+
+        .modal-content {
+            width: 70vw;      /* 70% ancho pantalla */
+            height: 70vh;     /* 70% alto pantalla */
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-content.enlarged {
+            transform: scale(1.3); /* efecto 30% más grande */
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2100;
+        }
+
+        .modal-close:hover {
+            color: #f00;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-inter">
 
-     <header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
+<header class="max-w-70vw mx-auto bg-blue-800 shadow-md">
     <nav class="px-4 py-4 flex flex-col sm:flex-row justify-center items-center">
         <div class="mt-4 sm:mt-0 flex flex-wrap justify-center sm:justify-center space-x-4">
             <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Inicio</a>
@@ -90,10 +152,9 @@
     </nav>
 </header>
 
-    <section class="max-w-70vw mx-auto relative flex items-center justify-center text-white text-3xl font-bold text-center p-4">
-        <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-auto md:h-full object-cover">
-    </section>
-
+<section class="max-w-70vw mx-auto relative flex items-center justify-center text-white text-3xl font-bold text-center p-4">
+    <img src="imagen1.jpg" alt="Vientos del Sur Inmobiliaria" class="w-full h-auto md:h-full object-cover">
+</section>
 
 <main class="container mx-auto px-4 py-8 md:py-12">
     <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
@@ -105,28 +166,37 @@
         <div class="space-y-8">
             
             <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                <!-- VIDEO -->
                 <div class="w-full md:w-1/2 flex flex-col">
-                    <div class="flex-grow rounded-lg overflow-hidden shadow-lg">
-                         <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="ratio-16-9 rounded-lg overflow-hidden shadow-lg">
+                         <iframe src="https://www.youtube.com/embed/8cJep-_xJeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica1.png')">
-                    <img src="grafica1.png" alt="Precio de Venta por Metro Cuadrado en Montevideo" class="w-full h-auto object-cover flex-grow">
+                <!-- IMAGEN -->
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item cursor-pointer" onclick="openModal('grafica1.png')">
+                    <div class="ratio-16-9">
+                        <img src="grafica1.png" alt="Precio de Venta por Metro Cuadrado en Montevideo">
+                    </div>
                     <div class="p-4 bg-gray-50">
                         <h3 class="font-semibold text-center text-gray-700">Gráfica 1: Precio de Venta por m²</h3>
                     </div>
                 </div>
             </div>
 
+            <!-- resto igual -->
             <div class="flex flex-col md:flex-row gap-8 items-stretch">
-                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica2.png')">
-                    <img src="grafica2.png" alt="Comparativa de Precio en Barrios Clave" class="w-full h-auto object-cover flex-grow">
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item cursor-pointer" onclick="openModal('grafica2.png')">
+                    <div class="ratio-16-9">
+                        <img src="grafica2.png" alt="Comparativa de Precio en Barrios Clave">
+                    </div>
                     <div class="p-4 bg-gray-50">
                         <h3 class="font-semibold text-center text-gray-700">Gráfica 2: Comparativa de Precio en Barrios Clave</h3>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica3.png')">
-                    <img src="grafica3.png" alt="Costos Promedio de Alquiler Mensual" class="w-full h-auto object-cover flex-grow">
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item cursor-pointer" onclick="openModal('grafica3.png')">
+                    <div class="ratio-16-9">
+                        <img src="grafica3.png" alt="Costos Promedio de Alquiler Mensual">
+                    </div>
                     <div class="p-4 bg-gray-50">
                         <h3 class="font-semibold text-center text-gray-700">Gráfica 3: Costos Promedio de Alquiler</h3>
                     </div>
@@ -134,14 +204,18 @@
             </div>
 
             <div class="flex flex-col md:flex-row gap-8 items-stretch">
-                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica4.png')">
-                    <img src="grafica4.png" alt="Rentabilidad Bruta Anual por Barrio" class="w-full h-auto object-cover flex-grow">
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item cursor-pointer" onclick="openModal('grafica4.png')">
+                    <div class="ratio-16-9">
+                        <img src="grafica4.png" alt="Rentabilidad Bruta Anual por Barrio">
+                    </div>
                     <div class="p-4 bg-gray-50">
                         <h3 class="font-semibold text-center text-gray-700">Gráfica 4: Rentabilidad Bruta Anual</h3>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item" onclick="openModal('grafica5.png')">
-                    <img src="grafica5.png" alt="Comparativa de Alquileres en Barrios Clave" class="w-full h-auto object-cover flex-grow">
+                <div class="w-full md:w-1/2 flex flex-col bg-white rounded-xl shadow-lg overflow-hidden graph-item cursor-pointer" onclick="openModal('grafica5.png')">
+                    <div class="ratio-16-9">
+                        <img src="grafica5.png" alt="Comparativa de Alquileres en Barrios Clave">
+                    </div>
                     <div class="p-4 bg-gray-50">
                         <h3 class="font-semibold text-center text-gray-700">Gráfica 5: Comparativa de Alquileres Mensuales</h3>
                     </div>
@@ -151,9 +225,10 @@
     </section>
 </main>
 
-<div id="imageModal" class="modal">
-    <span class="modal-close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
+<!-- Modal corregido -->
+<div id="image-modal" class="modal">
+    <span id="close-modal" class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-image">
 </div>
 
 <a href="https://wa.me/098803248" target="_blank" class="whatsapp-button bg-green-500 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
@@ -171,26 +246,6 @@
     </div>
 </footer>
 
-<script>
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-
-    function openModal(imageSrc) {
-        modal.style.display = "flex";
-        modalImg.src = imageSrc;
-    }
-
-    function closeModal() {
-        modal.style.display = "none";
-    }
-
-    // Cierra el modal si el usuario hace clic fuera de la imagen
-    modal.addEventListener('click', function(event) {
-        if (event.target == modal) {
-            closeModal();
-        }
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
