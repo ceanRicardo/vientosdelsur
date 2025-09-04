@@ -4,6 +4,10 @@ const carousel = document.getElementById('carousel');
 const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
 
+// --- NUEVO: Selectores para los botones del carrusel ---
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
 // Función para actualizar la posición del carrusel
 function updateCarousel() {
     if (carousel) {
@@ -23,6 +27,13 @@ function prevSlide() {
     updateCarousel();
 }
 
+// --- NUEVO: Event listeners para los botones del carrusel ---
+if (prevButton && nextButton) {
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+}
+
+
 // Inicializar el carrusel al cargar la página (si existe)
 if (carousel) {
     updateCarousel();
@@ -35,27 +46,26 @@ const modal = document.getElementById('image-modal');
 const modalImage = document.getElementById('modal-image');
 const closeModalBtn = document.getElementById('close-modal');
 
-// Función para abrir el modal con una imagen específica
+// --- CORREGIDO: Función para abrir el modal con una imagen específica ---
 function openModal(imageSrc) {
-    modalImage.src = imageSrc;
-    modal.classList.add('flex'); // se muestra el modal
-
-    // Reinicia animación de zoom
-    modalImage.classList.remove('enlarged');
-    setTimeout(() => {
-        modalImage.classList.add('enlarged');
-    }, 50);
-
-    document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+    if (modal && modalImage) {
+        modalImage.src = imageSrc;
+        modal.classList.remove('hidden'); // <-- CORRECCIÓN: Quitar 'hidden'
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+    }
 }
 
-// Función para cerrar el modal
+// --- CORREGIDO: Función para cerrar el modal ---
 function closeModal() {
-    modal.classList.remove('flex'); // se oculta el modal
-    modalImage.src = '';
-    modalImage.classList.remove('enlarged');
-    document.body.style.overflow = 'auto'; // Habilita el scroll del fondo
+    if (modal) {
+        modal.classList.add('hidden'); // <-- CORRECCIÓN: Añadir 'hidden'
+        modal.classList.remove('flex');
+        modalImage.src = '';
+        document.body.style.overflow = 'auto'; // Habilita el scroll del fondo
+    }
 }
+
 
 // Escuchadores de eventos para cerrar el modal
 if (closeModalBtn) {
